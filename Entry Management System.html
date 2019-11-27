@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>Login</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<style>
+.loginn{
+	margin:0 auto;
+	margin-top:20px;
+	border-radius:10px;
+	width:35%;
+	padding:15px;
+	background:white;
+}
+.ll{
+	font-size:18px;
+	color:white;
+	text-align:center;
+	padding-top:50px;
+}
+.iconin{
+	position:relative;
+}
+.iconin i{
+	position:absolute;
+	top:2;
+	left:100;
+}
+.iconin1{
+	position:relative;
+}
+.iconin1 i{
+	position:absolute;
+	top:15;
+	left:170;
+}
+.forminp2{
+	transition:200ms all;
+	width:200px;
+	border:none;
+	border-bottom:1px solid black;
+	margin-bottom:10px;
+	background:transparent;
+	outline:none;
+	height:30px;
+}
+::placeholder{
+	text-align:center;
+	font-family:comic sans ms;
+}
+i{
+	color:black;
+}
+.lbt{
+	padding:10px;
+	color:black;
+	background:#2ecc71;
+	border:none;
+	border-radius:8px;
+}
+.form-control:focus{
+	border-bottom-color:#2ecc71;
+}
+.iconin input[type="text"]:focus + i{
+	color:#2ecc71;
+}
+.iconin input[type="password"]:focus + i{
+	color:#2ecc71;
+}
+@media screen and (max-width: 540px){
+	.loginn{width: 65%}
+}
+.backcolor
+{
+background: #c0392b;
+  background: -webkit-linear-gradient(#c0392b,#8e44ad);
+  background: -moz-linear-gradient(#c0392b,#8e44ad);
+  background:  linear-gradient(#c0392b,#8e44ad);
+  background: linear-gradient(to right bottom, #c0392b,#8e44ad);
+  }
+</style>
+ <script>
+ 
+ function nexttab(evt) 
+    {
+ 
+        document.getElementById("Host").style.display = "block";
+		document.getElementById("basic").style.display="none";
+		 document.getElementById("half").style.display = "block";
+		  document.getElementById("empty").style.display = "none";
+    }
+ function backtab(evt)
+    {
+        document.getElementById("Host").style.display = "none";
+        document.getElementById("basic").style.display="block";
+		document.getElementById("half").style.display = "none";
+		document.getElementById("empty").style.display = "block";
+    }
+    function show()
+	{
+		document.getElementById("ss").style.display = "block";
+	}
+	function hide()
+	{
+		document.getElementById("ss").style.display = "none";
+	}
+	function pvalidate(){
+	var reg1 = /^[0-9]+$/;
+	var p =document.details.phone.value;
+	var r = p.toString().length;
+	if(!p.match(reg1)){
+		window.alert("Enter Numbers only");
+	}
+	else{
+		if(r!=10){
+			window.alert("Enter 10 digits only");
+		}
+	}
+}
+	
+         
+</script>		
+</head>
+<body style=" background: #c0392b;
+  background: -webkit-linear-gradient(#c0392b,#8e44ad);
+  background: -moz-linear-gradient(#c0392b,#8e44ad);
+  background:  linear-gradient(#c0392b,#8e44ad);
+  background: linear-gradient(to right bottom, #c0392b,#8e44ad);">
+  <div style="margin:0 auto;width:90%; padding-top:15px;">
+  <div class="row">
+        <div class="offset-sm-3 col-sm-6" style="color: white;">
+            <div class="row">
+                <div class="col-sm-6 step1">
+                    <center>
+                        <h5>
+                        Step 1.
+                    </h5>
+                    </center>
+                    <center><p>Guest Details</p></center>
+                </div>
+                <div class="col-sm-6">
+                    <center><h5>
+                            Step 2.
+                        </h5></center>
+                    <center><p>Host Details</p></center>
+                </div>
+            </div>
+            <div class="row">
+                
+                    <div class="container">
+                            <div class="progress" style="">
+                                    <div class="progress-bar" id="empty" role="progressbar" aria-valuenow="0 " aria-valuemin="0" aria-valuemax="100" style="width:0% ;">
+                                        0%
+                                    </div>
+                                    <div class="progress-bar" id="half" role="progressbar" aria-valuenow="50 " aria-valuemin="0" aria-valuemax="100" style="width:50% ;display:none;">
+                                            50%
+                                        </div>
+                                </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+  </div>
+  <p class="ll">Welcome to Entry Management System !<br></p></center>
+  <div style="margin:0 auto;background:white;width:40%;border:none;border-radius:10px;padding:20px;">
+	 <div class="offset-md-3 col-md-6" id="formbox">
+            <form  method="POST" action="entry.php" class="form-group" name="details">
+               <div class="tab" id="basic">
+                        <div class="input-group">
+                              <span class="input-group-addon col-ico-3 backcolor" style="width:40%;color:white;padding:6px;"><i class="fa fa-address-card" aria-hidden="true" style="width:20%;color:white;"></i> Name </span>
+                                
+                                <input type="text" name="Name" id="Name"  class="form-control form-group " style="border-top-right-radius:30px;
+                                border-bottom-right-radius:30px;" required >
+                               
+                        </div> <br>
+                        <div class="input-group">
+                            <span class="input-group-addon col-ico-3 backcolor" style="width: 40%;padding:6px;"><i class="fa fa-calendar" aria-hidden="true" style="color:white;" > Email</i></span>
+                            <input type="email" name="Email" id="Email" class="form-control form-group " style="border-top-right-radius:30px;
+                            border-bottom-right-radius:30px;" onfocusout="validate();" required>
+                            
+                        </div><br>
+                        <div class="input-group">
+                            <span class="input-group-addon col-ico-3 backcolor" style="width: 40%;padding:6px;"><i class="fa fa-university" style="color:white;">Phone Number</i> </span>
+                             
+                        <input type="text" name="phone" id="phone" class="form-control form-group " style="border-top-right-radius:30px;
+                            border-bottom-right-radius:30px;" required>
+
+                        </div><br>
+                        <div class="input-group" >
+                            <input type="button" class="form-control form-group col-ico-button backcolor" style="color:white;"value="Next" onclick="nexttab(event)" >
+                        
+                        </div>
+						<div class="input-group" >
+                            <input type="button" class="form-control form-group col-ico-button backcolor" style="color:white;"  value="Checkout" onclick="window.location='checkout.php';" >
+                        
+                        </div>
+						
+                </div>
+				<div class="tab" id="Host" style="display:none;">
+                   
+                      <div class="input-group">
+                       <span class="input-group-addon col-ico-3 backcolor" style="width:40%;padding:6px;color:white;"><i class="fa fa-id-card " style="color:white;"></i> Name</span>
+                        <input id="Host" type="text" name="hname" class="form-control form-group " style="border-top-right-radius:30px;
+                        border-bottom-right-radius:30px;" placeholder="Host Name"  >
+                      </div><br>
+                        <div class="input-group">
+                          <span class="input-group-addon col-ico-3 backcolor" style="width:40%;padding:6px; color:white;" ><i  class="fa fa-calendar" style="color:white;"></i> Number</span>
+                          <input id="Host" type="text" class="form-control form-group " style="border-top-right-radius:30px;
+                          border-bottom-right-radius:30px;" name="hphone" placeholder="Host Mobile Number"   >
+                        </div><br>
+                        <div class="input-group">
+                          <span class="input-group-addon col-ico-3 backcolor" style="width:40%;padding:6px;color:white;"><i class="fa fa-university" style="color:white; "></i> Email</span>
+                          <input id="Host" type="email" class="form-control form-group " style="border-top-right-radius:30px;
+                          border-bottom-right-radius:30px;" name="hemail" placeholder="Host Email Address"   >
+                        </div><br>
+                       
+                     
+                        <div class="input-group">
+                            <input type="button" class="form-control form-group col-ico-button backcolor" style="color:white;" value="Back" onclick="backtab(event)"style="float:left;" >
+                            <input type="submit" value="Submit"  style="color:white;" class="form-control form-group col-ico-button backcolor" >
+                        </div>
+                      </div>
+
+                      
+                    
+                      
+                        
+                </div>
+                    
+                </form>
+                
+   </div> <br><Br>
+ </body>
+ </html>
