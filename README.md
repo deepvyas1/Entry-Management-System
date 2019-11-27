@@ -16,6 +16,11 @@ Approach:
 5. Currently status of respective user will be "1" which means "Checked in".
 6. When the user will checkout status become "0" and Checkout time will be recorded and email will be sent to the guest.
 
+ Files included:
+ 1.HTML File:Entry Management System.html. 
+ 2. PHP File:entry.php and checkout.php.
+ 3. SQL File: entry_management.sql that contains structure of database.
+ 
  
 In this system the technologies used are:-
 Frontend Technologies: HTML,CSS,Javascript.
